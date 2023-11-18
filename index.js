@@ -7,8 +7,16 @@
  * trimProperties({ name: '  jane  ' }) // returns a new object { name: 'jane' }
  */
 function trimProperties(obj) {
-  // ✨ implement
+  for (let key in obj) {
+    obj[key] = obj[key].trim()
+  }
+  return obj
 }
+
+
+
+
+
 
 /**
  * [Exercise 2] trimPropertiesMutation trims in place the properties of an object
@@ -22,6 +30,11 @@ function trimPropertiesMutation(obj) {
   // ✨ implement
 }
 
+
+
+
+
+
 /**
  * [Exercise 3] findLargestInteger finds the largest integer in an array of objects { integer: 1 }
  * @param {object[]} integers - an array of objects
@@ -34,6 +47,11 @@ function findLargestInteger(integers) {
   // ✨ implement
 }
 
+
+
+
+
+
 class Counter {
   /**
    * [Exercise 4A] Counter creates a counter
@@ -42,6 +60,11 @@ class Counter {
   constructor(initialNumber) {
     // ✨ initialize whatever properties are needed
   }
+
+
+
+
+
 
   /**
    * [Exercise 4B] Counter.prototype.countDown counts down to zero
@@ -59,6 +82,11 @@ class Counter {
     // ✨ implement
   }
 }
+
+
+
+
+
 
 class Seasons {
   /**
@@ -84,6 +112,11 @@ class Seasons {
     // ✨ implement
   }
 }
+
+
+
+
+
 
 class Car {
   /**
@@ -131,6 +164,11 @@ class Car {
   }
 }
 
+
+
+
+
+
 /**
  * [Exercise 7] Asynchronously resolves whether a number is even
  * @param {number} number - the number to test for evenness
@@ -147,6 +185,11 @@ class Car {
 function isEvenNumberAsync(number) {
   // ✨ implement
 }
+
+
+
+
+
 
 module.exports = {
   trimProperties,
