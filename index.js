@@ -22,10 +22,16 @@ class Counter {
   constructor(initialNumber) {
     this.value = initialNumber
   }
+  init = false
   countDown() {
-    if (this.value) {
+    if (!this.init) {
+      this.init=true
+      return this.value
+    }
+    else if(this.value) {
       this.value-=1
     }
+    return this.value
   }
 }
 
