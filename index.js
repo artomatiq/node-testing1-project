@@ -14,8 +14,13 @@ function trimPropertiesMutation(obj) {
 }
 
 function findLargestInteger(integers) {
-  integers.sort((a, b) => a - b)
-  return integers[integers.length-1]
+  let array = []
+  integers.map(int => {
+    array.push(Object.values(int)[0])
+  })
+  array.sort((a, b) => a - b)
+  console.log(array)
+  return array[array.length-1]
 }
 
 class Counter {
@@ -76,7 +81,6 @@ class Car {
       this.gas += gallons
     }
     else {
-      console.log(this.tankSize)
       this.gas = this.tankSize
     }
     return this.mpg * this.gas
