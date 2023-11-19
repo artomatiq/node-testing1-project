@@ -66,14 +66,6 @@ class Counter {
   /**
    * [Exercise 4B] Counter.prototype.countDown counts down to zero
    * @returns {number} - the next count, does not go below zero
-   *
-   * EXAMPLE
-   * const counter = new Counter(3)
-   * counter.countDown() // returns 3
-   * counter.countDown() // returns 2
-   * counter.countDown() // returns 1
-   * counter.countDown() // returns 0
-   * counter.countDown() // returns 0
    */
   countDown() {
     if (this.value) {
@@ -91,8 +83,10 @@ class Seasons {
   /**
    * [Exercise 5A] Seasons creates a seasons object
    */
+  array = ['spring', 'summer', 'fall', 'winter']
+  index = 0
   constructor() {
-    // ✨ initialize whatever properties are needed
+    this.value = this.array[0]
   }
 
   /**
@@ -108,7 +102,10 @@ class Seasons {
    * seasons.next() // returns "summer"
    */
   next() {
-    // ✨ implement
+    if (this.index === 3) this.index = 0
+    else this.index += 1
+    this.value = this.array[this.index]
+    return this.value
   }
 }
 
