@@ -28,10 +28,14 @@ class Counter {
       this.init=true
       return this.value
     }
-    else if(this.value) {
+    else if (this.value){
       this.value-=1
+      return this.value
     }
-    return this.value
+    else {
+      return this.value
+    }
+    
   }
 }
 
